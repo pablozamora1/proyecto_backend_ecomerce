@@ -1,1 +1,16 @@
-[{"nombre":"yami","apellido":"jaime","id":"z9-"},{"nombre":"nani","apellido":"vottero","id":"k0H"},{"nombre":"mia","apellido":"capelli","id":"t0C"},{"nombre":"romy","apellido":"cepeda","id":"oQ6"}]
+[
+  {
+    "nombre": "mia",
+    "apellido": "capelli",
+    "categoria": "todaaaaa ",
+    "id": "k0H"
+  },
+  {
+    "nombre": "mia",
+    "apellido": "capelli",
+    "categoria": "trola hermosa te paso la lengua ",
+    "id": "t0C"
+  },
+  { "nombre": "yami", "apellido": "jaime", "id": "z9-" },
+  { "nombre": "romy", "apellido": "cepeda", "id": "oQ6" }
+]
