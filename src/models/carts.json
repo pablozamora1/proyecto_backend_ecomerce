@@ -4,6 +4,10 @@
     "products": [
       {
         "id": "k0H",
+        "quantity": 4
+      },
+      {
+        "id": "t0C",
         "quantity": 1
       }
     ]

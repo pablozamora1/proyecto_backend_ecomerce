@@ -24,18 +24,18 @@ class CartManager {
     return Carts.find((item) => item.id === id);
   };
 
+  getCartsById = async (id) => {
+    let cartsById = this.cartsExist(id);
+    if (!cartsById) return "carrito no encontrado";
+    return cartsById;
+  };
+
   addCarts = async () => {
     let cartsOld = await this.readCarts();
     let id = nanoid(3);
     let cartConcat = [{ id: id, products: [] }, ...cartsOld];
     await this.writeCarts(cartConcat);
     return "Carrito agregado";
-  };
-
-  getCartsById = async (id) => {
-    let cartsById = this.cartsExist(id);
-    if (!cartsById) return "carrito no encontrado";
-    return cartsById;
   };
 
   addProductsInCarts = async (cartId, productId) => {
@@ -51,19 +51,18 @@ class CartManager {
         (prod) => prod.id === productId
       );
       productInCart.quantity++;
+      let cartsConcat = [
+        { id: cartId, products: [productInCart] },
+        ...cartFilter,
+      ];
 
-      let cartsConcat = [productInCart, ...cartFilter];
-      console.log(pro);
-      // await this.writeCarts(cartsConcat);
-      console.log(cartsConcat);
-      // console.log(cartFilter);
+      await this.writeCarts(cartsConcat);
       return "producto sumado al carrito";
     }
 
-    let cartsConcat = [
-      { id: cartId, products: [{ id: productsById.id, quantity: 1 }] },
-      ...cartFilter,
-    ];
+    cartsById.products.push({ id: productsById.id, quantity: 1 });
+
+    let cartsConcat = [cartsById, ...cartFilter];
     await this.writeCarts(cartsConcat);
     return "producto agregado al carrito";
   };
