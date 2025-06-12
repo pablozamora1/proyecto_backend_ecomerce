@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 class ProductManager {
   constructor() {
     this.path = "./src/models/products.json";
+    this.product = [];
   }
 
   readProducts = async () => {
@@ -13,7 +14,7 @@ class ProductManager {
   };
 
   writeProducts = async (product) => {
-    await fs.writeFile(this.path, JSON.stringify(product));
+    await fs.writeFile(this.path, JSON.stringify(product, null, 2));
   };
 
   productExist = async (id) => {
@@ -21,10 +22,52 @@ class ProductManager {
     return products.find((item) => item.id === id);
   };
 
-  addProducts = async (product) => {
+  addProducts = async (newObjet) => {
+    const {
+      title,
+      description,
+      code,
+      price,
+      status,
+      stock,
+      category,
+      thumbnail,
+    } = newObjet;
+    // Validar que todos los campos estén presentes
+    if (
+      !title ||
+      !description ||
+      !code ||
+      !price ||
+      !status ||
+      !stock ||
+      !category
+    ) {
+      return "todos los campos son obligatorios";
+    }
+
+    // Validar que el código sea único
+    let products = await this.readProducts();
+    let codeExist = products.some((item) => item.code === code);
+    if (codeExist) {
+      return "el código del producto ya existe";
+    }
+
+    const newProduct = {
+      id: nanoid(3),
+      title,
+      description,
+      code,
+      price,
+      status,
+      stock,
+      category,
+      thumbnail: thumbnail || [],
+    };
+
     let productsOld = await this.readProducts();
-    product.id = nanoid(3);
-    let productAll = [...productsOld, product];
+
+    let productAll = [...productsOld, newProduct];
     await this.writeProducts(productAll);
     return "producto agregado";
   };

@@ -1,16 +1,57 @@
 [
   {
-    "nombre": "mia",
-    "apellido": "capelli",
-    "categoria": "todaaaaa ",
-    "id": "k0H"
+    "id": "Eob",
+    "title": "mouse",
+    "description": "barataso",
+    "code": "abc119",
+    "price": 570,
+    "status": true,
+    "stock": 25,
+    "category": "Componentes PC",
+    "thumbnail": []
   },
   {
-    "nombre": "mia",
-    "apellido": "capelli",
-    "categoria": "trola hermosa te paso la lengua ",
-    "id": "t0C"
+    "id": "Fcu",
+    "title": "mouse",
+    "description": "barataso",
+    "code": "abc128",
+    "price": 570,
+    "status": true,
+    "stock": 25,
+    "category": "Componentes PC",
+    "thumbnail": []
   },
-  { "nombre": "yami", "apellido": "jaime", "id": "z9-" },
-  { "nombre": "romy", "apellido": "cepeda", "id": "oQ6" }
+  {
+    "id": "te8",
+    "title": "mouse",
+    "description": "barataso",
+    "code": "abc148",
+    "price": 570,
+    "status": true,
+    "stock": 25,
+    "category": "Componentes PC",
+    "thumbnail": []
+  },
+  {
+    "id": "BV1",
+    "title": "mouse",
+    "description": "barataso",
+    "code": "abc248",
+    "price": 570,
+    "status": true,
+    "stock": 25,
+    "category": "Componentes PC",
+    "thumbnail": []
+  },
+  {
+    "id": "hbs",
+    "title": "mouse",
+    "description": "barataso",
+    "code": "abc244",
+    "price": 570,
+    "status": true,
+    "stock": 25,
+    "category": "Componentes PC",
+    "thumbnail": []
+  }
 ]
