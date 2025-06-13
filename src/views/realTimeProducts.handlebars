@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <title>RealtimeProducts</title>
+</head>
+
+<body>
+    <div class="container col-6">
+
+        <h1>Formulario para Ingresar Productos</h1>
+        <br>
+
+        <form class="form-product">
+            <div class="mb-3">
+                <label for="title" class="form-label">Nombre del Producto</label>
+                <input id="title" name="title" type="text" class="form-control" required
+                    placeholder="ingrese el Nombre del producto">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Descripcion</label>
+                <input id="description" name="description" type="text" class="form-control" required
+                    placeholder="ingrese una descripcion del producto">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input id="price" name="price" type="number" class="form-control" required
+                    placeholder="ingrese el Precio del producto">
+            </div>
+            <div class="mb-3">
+                <label for="thumbnails" class="form-label">Imagen</label>
+                <input id="thumbnails" name="thumbnails" type="text" class="form-control" required
+                    placeholder="ingrese el link de la imagen del producto">
+            </div>
+            <div class="mb-3">
+                <label for="code" class="form-label">Código</label>
+                <input id="code" name="code" type="text" class="form-control" required
+                    placeholder="ingrese el Código del producto">
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input id="stock" name="stock" type="number" class="form-control" required
+                    placeholder="ingrese el Stock del producto">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Categoria</label>
+                <input id="category" name="category" type="text" class="form-control" required
+                    placeholder="ingrese la Categoria del producto">
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-select">
+                    <option selected>Selecciona una Opcion</option>
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
+            </div>
+
+            <button id="btnEnviar" type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/index.js"></script>
+
+    </div><br>
+    <div class="contenedorCards">
+
+        <div class="containerProducts" id="containerProducts"></div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<h1>Ecomerce Tech</h1>
+
+<div class="homeCards">
+
+    {{#each products}}
+    <div class="cardProducts">
+        <div class="imgCard">
+            <img src={{this.thumbnails}} alt="">
+        </div>
+        <div>
+            <h3>Titulo: {{this.title}}</h3>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>Stock: {{this.stock}}</p>
+            <p>Categoria: {{this.category}}</p>
+        </div>
+    </div>
+    {{/each}}
+
+</div>

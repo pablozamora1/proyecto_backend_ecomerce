@@ -1,0 +1,94 @@
+h1 {
+  color: rgb(26, 25, 25);
+  text-align: center;
+}
+.containerProducts {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contenedorCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 5px solid #ccc;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  width: 370px;
+  height: 370px;
+}
+
+.card img {
+  width: 80px;
+  height: 70px;
+}
+
+.cardProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 3px solid #ccc;
+  border-radius: 2px;
+  width: 425px;
+  height: 560px;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+}
+.cardProducts img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.homeCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.realTimeBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+}
+
+.form {
+  justify-content: center;
+  border: 3px solid #ccc;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  width: 550px;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formChat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 3px solid #ccc;
+  width: 400px;
+  min-height: 300px;
+}
