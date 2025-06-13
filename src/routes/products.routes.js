@@ -1,4 +1,4 @@
-import e, { Router } from "express";
+import { Router } from "express";
 import ProductManager from "../controllers/ProductManager.js";
 const product = new ProductManager();
 const router = Router();
