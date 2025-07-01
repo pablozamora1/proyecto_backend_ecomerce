@@ -1,10 +1,11 @@
 import express from "express";
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
+import "./db/database.js"; // Importar la conexión a la base de datos
 import viewsRouter from "./routes/views.routes.js";
 import productRouter from "./routes/products.routes.js";
 import cartRouter from "./routes/cart.routes.js";
-import ProductManager from "./controllers/ProductManager.js";
+import ProductManager from "./dao/db/ProductManager_db.js";
 
 const productManager = new ProductManager();
 
@@ -49,8 +50,8 @@ io.on("connection", async (socket) => {
   socket.emit("products", await productManager.getProducts());
 
   //Recibe el evento "eliminarProducto" desde el cliente:
-  socket.on("deleteProduct", async (id) => {
-    await productManager.deleteProductsById(id);
+  socket.on("deleteProduct", async (_id) => {
+    await productManager.deleteProductsById(_id);
     //Envia el array de products actualizado a todos los products:
     io.sockets.emit("products", await productManager.getProducts());
   });

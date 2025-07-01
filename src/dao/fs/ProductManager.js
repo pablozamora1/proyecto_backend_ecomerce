@@ -1,9 +1,9 @@
-import { promises as fs } from "fs";
-import { nanoid } from "nanoid";
+// import { promises as fs } from "fs";
+// import { nanoid } from "nanoid";
 
 class ProductManager {
   constructor() {
-    this.path = "./src/models/products.json";
+    this.path = [];
     this.product = [];
   }
 

@@ -7,8 +7,7 @@
     "code": "abc121",
     "stock": 25,
     "status": true,
-    "category": "Componentes PC",
-    "id": "A1xtu3HILs0VJ3pMIoDwj"
+    "category": "Componentes PC"
   },
   {
     "title": "xbox 360",
@@ -18,8 +17,7 @@
     "code": "abc122",
     "stock": 25,
     "status": true,
-    "category": "Consolas",
-    "id": "HG0ApjaOT-ikAItRtz7Ha"
+    "category": "Consolas"
   },
   {
     "title": "smart-tv",
@@ -29,8 +27,7 @@
     "code": "abc125",
     "stock": 25,
     "status": true,
-    "category": "smart-tvs",
-    "id": "8UFLi2FNGNBj3RQ0PoMLb"
+    "category": "smart-tvs"
   },
   {
     "title": "placaVideo",
@@ -40,8 +37,7 @@
     "code": "abc126",
     "stock": 25,
     "status": true,
-    "category": "Componentes PC",
-    "id": "z5G87Vtzaw8QJpu5IOC_h"
+    "category": "Componentes PC"
   },
   {
     "title": "trsdnghcnh",
@@ -51,8 +47,7 @@
     "code": "fh65p",
     "stock": "6",
     "category": "trsdnghcnh",
-    "status": true,
-    "id": "y9SoCMaQhRzVIndRwB7B9"
+    "status": true
   },
   {
     "title": "impresora",
@@ -62,8 +57,7 @@
     "code": "5678",
     "stock": "6",
     "category": "impresoras",
-    "status": true,
-    "id": "-7X"
+    "status": true
   },
   {
     "title": "router",
@@ -73,8 +67,7 @@
     "code": "12345r",
     "stock": "5",
     "category": "router",
-    "status": true,
-    "id": "Qwo"
+    "status": true
   },
   {
     "title": "monitor",
@@ -84,8 +77,7 @@
     "code": "112356",
     "stock": "3",
     "category": "monitores",
-    "status": true,
-    "id": "d3xZWhx-MpPYDyR0Q1Isi"
+    "status": true
   },
   {
     "title": "mouse",
@@ -95,7 +87,6 @@
     "code": "1234",
     "stock": "5",
     "category": "mouse",
-    "status": true,
-    "id": "QIrEBM6_yi_TXZsTzty8f"
+    "status": true
   }
 ]
