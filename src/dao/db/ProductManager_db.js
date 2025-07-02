@@ -7,9 +7,6 @@ class ProductManager {
 
   async getProducts() {
     const products = await this.model.find().lean();
-    products.forEach((product) => {
-      console.log(`el id es ${product._id.toString()}`);
-    });
     return products;
   }
 

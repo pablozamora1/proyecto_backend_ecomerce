@@ -6,7 +6,6 @@ const productManager = new ProductManager();
 router.get("/", async (req, res) => {
   try {
     const products = await productManager.getProducts();
-
     res.render("index", { products });
   } catch (error) {
     res.send("Error al obtener los productos");
