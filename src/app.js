@@ -4,7 +4,7 @@ import { Server } from "socket.io";
 import "./db/database.js"; // Importar la conexión a la base de datos
 import viewsRouter from "./routes/views.routes.js";
 import productRouter from "./routes/products.routes.js";
-import cartRouter from "./routes/cart.routes.js";
+import cartRouter from "./routes/carts.routes.js";
 import ProductManager from "./dao/db/ProductManager_db.js";
 
 const productManager = new ProductManager();

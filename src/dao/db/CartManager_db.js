@@ -63,6 +63,40 @@ class CartManager {
       throw error;
     }
   }
+  async deleteCart(cartId) {
+    try {
+      const cart = await CartModel.findByIdAndDelete(cartId);
+      if (!cart) {
+        throw new Error("Cart not found");
+      }
+      return cart;
+    } catch (error) {
+      console.error("Error deleting cart:", error);
+      throw error;
+    }
+  }
+  async deleteProductFromCart(cartId, productId) {
+    try {
+      const cart = await CartModel.findById(cartId);
+      if (!cart) {
+        throw new Error("Cart not found");
+      }
+
+      const productIndex = cart.products.findIndex(
+        (p) => p.product.toString() === productId
+      );
+      if (productIndex > -1) {
+        cart.products.splice(productIndex, 1);
+        await cart.save();
+        return cart;
+      } else {
+        throw new Error("Product not found in cart");
+      }
+    } catch (error) {
+      console.error("Error deleting product from cart:", error);
+      throw error;
+    }
+  }
 }
 
 export default CartManager;

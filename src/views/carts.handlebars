@@ -1,9 +1,36 @@
-<h1>Tu carrito:</h1>
+<h1>Tu Carrito:</h1>
 
 {{#each cart}}
-<div>
-    <p>Producto: {{this.product.title}}</p>
-    <p>Cantidad: {{this.quantity}}</p>
-    <p>id: {{this.cart._id}}</p>
+<div class="cartContainer" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+
+    <h2>ID del Carrito: {{this._id}}</h2>
+
+
+    {{#if this.products.length}}
+    <h3>Productos en este carrito:</h3>
+    <ul>
+
+        {{#each this.products}}
+        <li style="margin-bottom: 10px; justify-content: space-between; display: flex;">
+
+            <div style="display: flex; width: 150px; height: 100px; overflow: hidden;">
+                <img src={{this.product.thumbnail}} alt="">
+            </div>
+            <p>Producto: <strong>{{this.product.title}}</strong></p>
+            <p>Cantidad: {{this.quantity}}</p>
+            <p>Precio: $ <strong>{{this.product.price}}</strong></p>
+
+        </li>
+        <button class="btnEliminar">Eliminar del Carrito</button>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>Este carrito no tiene productos.</p>
+    {{/if}}
 </div>
 {{/each}}
+
+{{!-- Puedes agregar un mensaje si no hay carritos --}}
+{{#unless cart.length}}
+<p>No hay carritos disponibles.</p>
+{{/unless}}
